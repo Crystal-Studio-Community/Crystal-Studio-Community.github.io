@@ -1,0 +1,9 @@
+community:
+  label: Community
+  permalink: /community
+  description: Crystal Studio Community news and updates.
+
+welcome:
+  label: Welcome
+  permalink: /welcome
+  description: Welcome posts for new members.
