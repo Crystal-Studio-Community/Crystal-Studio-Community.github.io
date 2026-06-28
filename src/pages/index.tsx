@@ -11,23 +11,23 @@ import styles from './index.module.css';
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
+    <header className={clsx('hero hero--primary', styles.heroBanner)} style={{ borderBottom: '1px solid var(--card-border-color)', padding: '6rem 0', textAlign: 'center' }}>
       <div className="container">
-        <Heading as="h1" className="hero__title" style={{ fontSize: '3.5rem', fontWeight: 'bold' }}>
+        <Heading as="h1" className="hero__title" style={{ fontSize: '3.5rem', fontWeight: '800', letterSpacing: '-0.025em' }}>
           💎 {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle" style={{ fontSize: '1.5rem', margin: '1.5rem 0' }}>
+        <p className="hero__subtitle" style={{ fontSize: '1.4rem', color: 'var(--ifm-color-emphasis-700)', maxWidth: '600px', margin: '1.5rem auto' }}>
           {siteConfig.tagline}
         </p>
-        <div className={styles.buttons} style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginTop: '2.5rem' }}>
           <Link
-            className="button button--secondary button--lg"
-            style={{ border: '2px solid var(--ifm-color-primary)', background: 'transparent', color: 'white' }}
+            className="button button--primary button--lg"
             to="/join">
             Join the Organization 🚀
           </Link>
           <Link
             className="button button--secondary button--lg"
+            style={{ border: '1px solid var(--card-border-color)', backgroundColor: 'transparent', color: 'var(--ifm-font-color-base)' }}
             to="/docs/intro">
             Read Guides 📖
           </Link>
@@ -41,10 +41,10 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Welcome to ${siteConfig.title}`}
-      description="The official landing page and educational portal of Crystal Studio Community. Built with Docusaurus.">
+      title={`Home | ${siteConfig.title}`}
+      description="The official learning portal and landing website of Crystal Studio Community. Built with Docusaurus.">
       <HomepageHeader />
-      <main style={{ padding: '3rem 0' }}>
+      <main style={{ padding: '5rem 0' }}>
         <HomepageFeatures />
       </main>
     </Layout>
